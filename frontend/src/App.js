@@ -1,12 +1,22 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import Gear from './components/Gear'
+import gearService from './services/gear'
 
-
-const App = (props) =>{
-  const [gear, setGear] = useState(props.gear)
+const App = () =>{
+  const [gear, setGear] = useState([])
   const [newGear, setNewGear] = useState('')
   const [newCost, setNewCost] = useState('')
   const [newType, setNewType] = useState('')
+
+  useEffect(() => {
+    console.log("helo")
+    gearService
+      .getAll()
+      .then(initialInv => {
+        console.log("all is well")
+        setGear(initialInv)
+
+      })}, [])
 
 
 
