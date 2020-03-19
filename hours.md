@@ -9,5 +9,8 @@
 | 12.3. | 2    | Setup MongoDB |
 | 13.3. | 2    | Continue work with MongoDB |
 | 17.3. | 3    | Tried to make front and backend work together |
+| 18.3. | 1    | Made changes to frontend |
+
+
 
 | total   | 1   | | 

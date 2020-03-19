@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
+
 const mongoose = require('mongoose')
+
 app.use(cors())
 app.use(express.json())
 app.use(express.static('build'))
@@ -8,7 +11,6 @@ app.use(express.static('build'))
 require('dotenv').config()
 
 const Gear = require('./models/gear.js')
-const cors = require('cors')
 
 
 const requestLogger = (request, response, next) => {
